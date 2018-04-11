@@ -1,6 +1,6 @@
 ---
 title: Leetcode
-category: algorithm
+category: Algorithm
 order: 2
 ---
 

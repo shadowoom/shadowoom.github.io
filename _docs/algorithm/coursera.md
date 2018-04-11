@@ -1,5 +1,5 @@
 ---
-title: Coursera - Princeton Algorithm Course
+title: Princeton Algorithm Course
 category: Algorithm
 order: 1
 ---
