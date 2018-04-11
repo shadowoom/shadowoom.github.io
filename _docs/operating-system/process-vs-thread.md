@@ -1,6 +1,6 @@
 ---
-title: Images
-category: Media
+title: Process vs Thread
+category: Operating System
 order: 1
 ---
 

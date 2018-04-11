@@ -1,6 +1,6 @@
 ---
-title: Phone
-category: Contact Syncing
+title: Leetcode
+category: algorithm
 order: 2
 ---
 

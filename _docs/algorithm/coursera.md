@@ -1,6 +1,6 @@
 ---
-title: Facebook
-category: Contact Syncing
+title: Coursera - Princeton Algorithm Course
+category: Algorithm
 order: 1
 ---
 
