@@ -11,7 +11,7 @@ Robert Sedgewick and Professor Kevin Wayne</p>
 
 <div class="changelog">
 	{% for post in site.posts %}
-	{% if post.type == algorithm_course %}
+	{% if post.type == "algorithm_course" %}
 	<ol>
 		<li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
 	</ol>
