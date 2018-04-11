@@ -1,14 +1,5 @@
 ---
 title:
-type: major
+type: algorithm_course
 ---
 
-This release introduces
-
-**Features:**
-
-*
-
-**Fixes:**
-
-*
