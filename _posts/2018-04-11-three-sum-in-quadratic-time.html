@@ -1,0 +1,56 @@
+---
+type: algorithm_course
+title: 3-SUM in quadratic time
+category: Algorithm/Coursera
+---
+
+<p>{{ page.date | date_to_string }}</p>
+
+<h5>Problem Description</h5>
+<p> 
+	<ul>
+		<li>
+			Find the number of  3-sum in an array of distinct integers that add up to 0.
+		</li>
+		<li>
+			The algorithm should take time proportional to n^2.
+		</li>
+	</ul>		
+</p>
+
+<h5>Personal Thoughts</h5>
+<p>
+	<ul>
+		<li>
+			Firstly, convert this problem into a two-sum problem and we can solve the two-sum in O(n) time with a HashMap.
+		</li>
+		<li>
+			Initialize a counter to zero and this counter is used to keep track of the number of 3-sum.
+		</li>
+		<li>
+			Keep an outer loop to iterate through the array. For each item in the array, deduct 0 by that item, for example, if the first number in the array is 8, then 0 - 8 = -8.
+		</li>
+		<li>
+			Then we store the above value into a variable and solve a 2-sum problem on the rest of the array items. For example, find out all distinct pairs which add up to -8.
+		</li>
+		<li>
+			When we iterate through each of the remaining items, we treat (the value of the above-mentioned variable - value each item) as keys and the index of the corresponding item as values in the HashMap.
+		</li>
+		<li>
+			While iterating through the remaining items, check whether they have already been stored in the HashMap as keys. If yes, increment the counter by one, if no, continue looping.
+		</li>
+		<li>
+			repeat step 4 to 6 until the outer loop reaches index, n - 2 item.
+		</li>
+		<li>
+			return counter value as the number of 3-sum.
+		</li>
+	</ul>
+</p>
+
+<h5>
+	<a href="https://github.com/shadowoom/algorithm/blob/master/src/coursera/ThreeSum.java">Java Implementation </a>
+</h5>
+
+
+
