@@ -12,7 +12,7 @@ Robert Sedgewick and Professor Kevin Wayne</p>
 <div class="changelog">
 	{% for change in site.posts %}
 		<div class="changelog-item">
-			<h3><a href="{{ site.baseurl }}{{ change.url }}">{{change.title}}</a></h3>
+			<h3><a href="{{ site.baseurl }}{{/change.category}}{{ change.url }}">{{change.title}}</a></h3>
 			<!--
 			<p><span class="date">{{ change.date | date: "%B %d, %Y" }}</span> <span class="badge {{ change.type }}">{{ change.type }}</span></p>
 
