@@ -13,7 +13,7 @@ Robert Sedgewick and Professor Kevin Wayne</p>
 	{% for post in site.posts %}
 	{% if post.type == algorithm_course %}
 	<ol>
-		<li><a href="{{ site.baseurl }}{{ change.url }}">{{change.title}}</a></li>
+		<li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
 	</ol>
 	{% endif %}
 	{% endfor %}
