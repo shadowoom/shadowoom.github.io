@@ -9,12 +9,12 @@ Robert Sedgewick and Professor Kevin Wayne</p>
 
 <p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Update Change Log</a></p>
 
-<div class="changelog">
-	{% for post in site.posts %}
-	{% if post.type == "algorithm_coursera" %}
+<div>
 	<ol>
-		<li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+		{% for post in site.posts %}
+			{% if post.type == "algorithm_coursera" %}
+				<li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+			{% endif %}
+		{% endfor %}
 	</ol>
-	{% endif %}
-	{% endfor %}
 </div>
