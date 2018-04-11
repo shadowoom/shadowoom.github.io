@@ -11,10 +11,10 @@ Robert Sedgewick and Professor Kevin Wayne</p>
 
 <div class="changelog">
 	{% for post in site.posts %}
+	{% if post.type == "algorithm_coursera" %}
 	<ol>
-		{% if post.type == "algorithm_course" %}
 		<li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
-		{% endif %}
 	</ol>
+	{% endif %}
 	{% endfor %}
 </div>
