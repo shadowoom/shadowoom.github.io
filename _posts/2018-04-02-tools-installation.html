@@ -21,16 +21,28 @@ category: Artificial Intelligence/Text-To-Speech
 	<li>Installing Dependencies:
 		<ul>
 			<li>
-				install csh, realpath, autotools-dev, automake - enter command sudo apt-get install csh realpath autotools-dev automake
+				install csh, realpath, autotools-dev, automake - enter command: <em>"sudo apt-get install csh realpath autotools-dev automake"</em>
 			</li>
 			<li>
-				python-2 and python libraries: numpy, scipy, matplotlib, lxml, theano, bandmat are requred and we can use anaconda to help us manage python and all the packages. The details can be found <em><a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04">here</a></em>  and <em><a href="https://conda.io/docs/index.html">official docs</a></em> (Note: try to set up a conda environment and install dependencies in that particular environment you are working with). In addition, bandmat may be not found in the default repositories of conda, hence we need to add the repo by executing the following command: source activate myenv + pip install bandmat
+				python-2 and python libraries: numpy, scipy, matplotlib, lxml, theano, bandmat are requred and we can use anaconda to help us manage python and all the packages. The details can be found <em><a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04">here</a></em>  and <em><a href="https://conda.io/docs/index.html">official docs</a></em> (Note: try to set up a conda environment and install dependencies in that particular environment you are working with). In addition, bandmat may be not found in the default repositories of conda, hence we need to add the repo by executing the following command: <em>"source activate myenv + pip install bandmat"</em>
 			</li>
 		</ul>
 	</li>
-	<li>source activate myenv and switch working directory to merlin</li>
-	<li>enter command "./tools/compile_tools.sh" for tools compilation</li>
+	<li><em>"source activate myenv"</em> and switch working directory to merlin</li>
+	<li>enter command <em>"./tools/compile_tools.sh"</em> for tools compilation</li>
 	<li>Details installation can be found at <em><a href="http://jrmeyer.github.io/tts/2017/02/14/Installing-Merlin.html">here</a></em> and <em><a href="https://cstr-edinburgh.github.io/merlin/">official merlin docs</a></em></li>
+	<li>Common Issues:
+		<ul>
+			<li>
+				<p> 
+					When run demo with merlin in our python environment, it states that to use MKL 2018 with Theano you MUST set "MKL_THREADING_LAYER=GNU" in your environment.
+				</p>
+				<p>
+					solution: "source deactive" +  conda install --name myenv mkl=2017, this will downgrade the mkl, mkl-service, numpy and scipy package in the environment. Then, "source activate myenv" + "pip install numpy --upgrade". This is to reinstall numpy.
+				</p>
+			</li>
+		</ul>
+	</li>
 </ol>
 
 
