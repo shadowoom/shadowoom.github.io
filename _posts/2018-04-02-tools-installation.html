@@ -1,0 +1,36 @@
+---
+type: tts
+title: TTS Tools Installation
+category: Artificial Intelligence/Text-To-Speech
+---
+
+<p>{{ page.date | date_to_string }}</p>
+
+<h5>Introduction</h5>
+
+<p>This blog describes various tools to be installed to perform various types of text-to-speech tasks for self-reference.</p>
+
+<h5>Merlin</h5>
+
+<p>
+	Merlin is a neural network based speech synthesis system developed at the Centre for Speech Technology Research, University of Edinburgh. It is a toolkit for building Deep Neural Network models for statistical parametric speech synthesis. It must be used in combination with a front-end text processor (e.g., Festival) and a vocoder (e.g., STRAIGHT or WORLD).
+</p>
+
+<p>The operating system used for installation should be linux and the installation steps are shown below:</p>
+<ol>
+	<li>Installing Dependencies:
+		<ul>
+			<li>
+				install csh, realpath, autotools-dev, automake - enter command sudo apt-get install csh realpath autotools-dev automake
+			</li>
+			<li>
+				python-2 and python libraries: numpy, scipy, matplotlib, lxml, theano, bandmat are requred and we can use anaconda to help us manage python and all the packages. The details can be found <em><a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-16-04">here</a></em>  and <em><a href="https://conda.io/docs/index.html">official docs</a></em> (Note: try to set up a conda environment and install dependencies in that particular environment you are working with). In addition, bandmat may be not found in the default repositories of conda, hence we need to add the repo by executing the following command: source activate myenv + pip install bandmat
+			</li>
+		</ul>
+	</li>
+	<li>source activate myenv and switch working directory to merlin</li>
+	<li>enter command "./tools/compile_tools.sh" for tools compilation</li>
+	<li>Details installation can be found at <em><a href="http://jrmeyer.github.io/tts/2017/02/14/Installing-Merlin.html">here</a></em> and <em><a href="https://cstr-edinburgh.github.io/merlin/">official merlin docs</a></em></li>
+</ol>
+
+
